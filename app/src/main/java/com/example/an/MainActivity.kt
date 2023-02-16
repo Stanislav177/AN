@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         retrofitRepository.getServer(callback)
     }
 
-    private val callback = object : Callback<DTO> {
-        override fun onResponse(call: Call<DTO>, response: Response<DTO>) {
+    private val callback = object : Callback<TestDTO> {
+        override fun onResponse(call: Call<TestDTO>, response: Response<TestDTO>) {
             if (response.isSuccessful) {
                 if (response.body() == null) {
                     val error = "BODY NULL O_o"
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        override fun onFailure(call: Call<DTO>, t: Throwable) {
+        override fun onFailure(call: Call<TestDTO>, t: Throwable) {
             val error = t.message
         }
 
