@@ -3,5 +3,5 @@ package com.example.an
 import retrofit2.Callback
 
 interface RetrofitRepository {
-    fun getServer(callback: Callback<TestDTO>)
+    fun getServer(callback: Callback<DTO>)
 }
